@@ -1,0 +1,11 @@
+POST http://localhost:5000/users/new
+Content-Type: application/json
+
+{
+    "gameScore" : 10,
+    "gounds": 2,
+    "homePoints": 2,
+    "homeAverage": 1,
+    "awayPoints":8,
+    "awayAverage": 4
+}
