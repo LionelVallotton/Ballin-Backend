@@ -18,16 +18,11 @@ exports.findAll = async (req, res) => {
 exports.create = async (request, response) => {
 
     const newStatistic = new StatisticModelRepo({
-        Rounds: request.body.statistic.rounds,
-        HomePoints: request.body.statistic.homeScore,
-        AwayPoints: request.body.statistic.awayScore,
+        NameP1: request.body.statistic.nameP1,
+        NameP2: request.body.statistic.nameP2,
+        PointListP1: request.body.statistic.pointListP1,
+        PointListP2: request.body.statistic.pointListP2
     })
-
-    newStatistic.HomeAverage = newStatistic.HomePoints / newStatistic.Rounds 
-    newStatistic.AwayAverage = newStatistic.AwayPoints / newStatistic.Rounds
-    newStatistic.GamePoints = newStatistic.HomePoints + newStatistic.AwayPoints 
-
-
 
     newStatistic.save((err, statisticCreated) => {
         if (err) {

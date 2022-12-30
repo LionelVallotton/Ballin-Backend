@@ -2,25 +2,19 @@ const { Double } = require('mongodb')
 const mongoose = require('mongoose')
 
 const statisticTemplate = new mongoose.Schema({
-    GamePoints:{
-        type: Number
+    NameP1:{
+        type: String
     },
-    Rounds:{
-        type: Number
+    NameP2:{
+        type: String
     },
-    HomePoints:{
-        type: Number
+    PointListP1:{
+        type: [Number]
     },
-    HomeAverage:{
-        type: Number
+    PointListP2:{
+        type: [Number]
     },
-    AwayPoints:{
-        type: Number
-    },
-    AwayAverage:{
-        type: Number
-    },
-    date:{
+    Date:{
         type: Date,
         default: Date.now
     }
